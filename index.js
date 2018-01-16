@@ -18,6 +18,8 @@ function addToCart(item) {
   return cart;
 }
 
+
+
 function viewCart() {
 
   }
