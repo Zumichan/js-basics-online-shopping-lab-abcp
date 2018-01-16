@@ -18,6 +18,10 @@ function addToCart(item) {
   return cart;
 }
 
+function getName(i){
+  return keys(cart[i])[0];
+}
+
 
 
 function viewCart() {
