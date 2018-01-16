@@ -38,6 +38,29 @@ function getAllDescriptions() {
     return descriptions
 }
 
+function summarizeDescriptions(ds) {
+    var message = ""
+    if (ds.length == 0) {
+        message = "Your shopping cart is empty."
+    } else {
+        message = "In your cart, you have "
+        for (var i = 0; i < ds.length; ++i) {
+            if (i > 0 && ds.length != 2) {//if there are more than 2 items
+                message = message + ", "
+            }
+            if (i == ds.length-1 && ds.length > 1) {//before the last item
+                if (ds.length == 2) {//if there are 2 items, space before and
+                    message = message + " " // no ", " before this
+                }
+                message = message + "and "
+            }
+            message = message + ds[i]
+        }
+    }
+    message = message + "."
+    return ret
+}
+
 
 
 
