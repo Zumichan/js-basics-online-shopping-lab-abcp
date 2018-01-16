@@ -19,24 +19,7 @@ function addToCart(item) {
 }
 
 function viewCart() {
-var message = "In your cart, you have";
- if (cart.length === 0) {
-    console.log("Your shopping cart is empty.")
-  }else if(cart.length === 1){
-    console.log(`${message} ${Object.keys(cart[0])} at $${cart[0][Object.keys(cart[0])]}.`);
-  }
-  else if(cart.length === 2){
-    console.log(`${message} ${Object.keys(cart[0])} at $${cart[0][Object.keys(cart[0])]} and ${Object.keys(cart[1])} at $${cart[1][Object.keys(cart[1])]}.`);
-  } 
-  else {
-    var newArray = [];
-    for (var i = 0; i < cart.length; i++) {
-      for (var elem in cart[i]) {
-        newArray.push(elem + " at $" + cart[i][elem])
-      }
-    }
-    console.log(message +" "+ newArray.join(", ") + ".");
-    }
+
   }
 
 function total() {
