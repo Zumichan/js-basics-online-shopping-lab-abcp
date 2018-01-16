@@ -19,7 +19,7 @@ function addToCart(item) {
 }
 
 function getName(i){
-  return keys(cart[i])[0];
+  return Object.keys(cart[i])[0];
 }
 
 
