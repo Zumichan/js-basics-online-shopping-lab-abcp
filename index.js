@@ -38,36 +38,32 @@ function getAllDescriptions() {
     return descriptions
 }
 
-function summarizeDescriptions(ds) {
+function summarizeDescriptions(description) {
     var message = ""
-    if (ds.length == 0) {
+    if (description.length == 0) {
         message = "Your shopping cart is empty."
     } else {
         message = "In your cart, you have "
-        for (var i = 0; i < ds.length; ++i) {
-            if (i > 0 && ds.length != 2) {//if there are more than 2 items
+        for (var i = 0; i < description.length; ++i) {
+            if (i > 0 && description.length != 2) {//if there are more than 2 items
                 message = message + ", "
             }
-            if (i == ds.length-1 && ds.length > 1) {//before the last item
-                if (ds.length == 2) {//if there are 2 items, space before and
-                    message = message + " " // no ", " before this
+            if (i == description.length-1 && description.length > 1) {
+                if (description.length == 2) {
+                    message = message + " " 
                 }
                 message = message + "and "
             }
-            message = message + ds[i]
+            message = message + description[i]
         }
     }
     message = message + "."
-    return ret
+    return message
 }
 
-function summarizeCartDescriptions() {
-    console.log(summarizeDescriptions(getAllDescriptions()))
-
-
 function viewCart() {
-
-  }
+  console.log(summarizeDescriptions(getAllDescriptions()))
+}
 
 function total() {
  var sum = 0;
