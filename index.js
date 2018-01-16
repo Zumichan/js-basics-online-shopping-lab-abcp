@@ -41,7 +41,7 @@ function getAllDescriptions() {
 function summarizeDescriptions(description) {
     var message = ""
     if (description.length === 0) {
-        message = "Your shopping cart is empty."
+        message = "Your shopping cart is empty"
     } else {
         message = "In your cart, you have "
         for (var i = 0; i < description.length; ++i) {
