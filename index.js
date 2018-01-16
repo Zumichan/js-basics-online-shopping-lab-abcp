@@ -40,16 +40,16 @@ function getAllDescriptions() {
 
 function summarizeDescriptions(description) {
     var message = ""
-    if (description.length == 0) {
+    if (description.length === 0) {
         message = "Your shopping cart is empty."
     } else {
         message = "In your cart, you have "
         for (var i = 0; i < description.length; ++i) {
-            if (i > 0 && description.length != 2) {//if there are more than 2 items
+            if (i > 0 && description.length != 2) {
                 message = message + ", "
             }
-            if (i == description.length-1 && description.length > 1) {
-                if (description.length == 2) {
+            if (i === description.length-1 && description.length > 1) {
+                if (description.length === 2) {
                     message = message + " " 
                 }
                 message = message + "and "
