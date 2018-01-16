@@ -30,6 +30,14 @@ function getItemDescription(i) {
   return getName(i) + " at $" + getPrice(i)
   }
 
+function getAllDescriptions() {
+    var descriptions = []
+    for (var i = 0; i < cart.length; ++i) {
+        descriptions.push(getItemDescription(i))
+    }
+    return descriptions
+}
+
 
 
 
