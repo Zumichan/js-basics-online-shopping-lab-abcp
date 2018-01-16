@@ -61,7 +61,8 @@ function summarizeDescriptions(ds) {
     return ret
 }
 
-
+function summarizeCartDescriptions() {
+    console.log(summarizeDescriptions(getAllDescriptions()))
 
 
 function viewCart() {
