@@ -26,6 +26,9 @@ function getPrice(i){
   return cart[i][getName(i)];
 }
 
+function getItemDescription(i) { 
+  return getName(i) + " at $" + getPrice(i)
+  }
 
 
 
