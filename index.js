@@ -22,6 +22,10 @@ function getName(i){
   return Object.keys(cart[i])[0];
 }
 
+function getPrice(i){
+  return cart[i][getName(i)];
+}
+
 
 
 function viewCart() {
